@@ -25,7 +25,7 @@
 			<RowDefinition Height="40"/>
 			<RowDefinition Height="10"/>
 		</Grid.RowDefinitions>
-
+		<Label Content="Add Family and Parameter Mappings" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
 		<Label Grid.Column="1" Grid.Row="2" Content="Family Name" VerticalAlignment="Center"/>
 		<Label Grid.Column="1" Grid.Row="3" Content="Family Type" VerticalAlignment="Center"/>
 		<Label Grid.Column="1" Grid.Row="4" Content="Disconnect Family" VerticalAlignment="Center"/>
@@ -38,32 +38,36 @@
 		<ComboBox Grid.Column="2" Grid.Row="4" Margin="5" />
 		<ComboBox Grid.Column="2" Grid.Row="5" Margin="5" />
 		<DataGrid Grid.Column="2" Grid.Row="6" Margin="5">
+			<!--Planning to use the same method as schematics parameter mapping-->
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Equipment" Width="125"/>
 				<DataGridTextColumn Header="Disconnect" Width="125"/>
 			</DataGrid.Columns>
 		</DataGrid>
 		<StackPanel Grid.Column="1" Grid.Row="7" Margin="5">
-			<TextBlock Text="Offset" VerticalAlignment="Center" Margin="5"/>
-			<TextBlock Text="Tolerance" VerticalAlignment="Center" Margin="5"/>
+			<Label Content="Offset" VerticalAlignment="Center" Margin="5"/>
+			<Label Content="Tolerance" VerticalAlignment="Center" Margin="5"/>
 		</StackPanel>
 		<StackPanel Grid.Column="2" Grid.Row="7" Orientation="Vertical" Height="80">
 			<StackPanel Orientation="Horizontal">
-				<TextBlock Text="X:" VerticalAlignment="Center" Margin="5"/>
+				<Label Content="X:" VerticalAlignment="Center" Margin="5"/>
 				<TextBox Width="50"  VerticalAlignment="Center" Margin="5"/>
-				<TextBlock Text="Y:" VerticalAlignment="Center" Margin="5"/>
+				<Label Content="Y:" VerticalAlignment="Center" Margin="5"/>
 				<TextBox Width="50"  VerticalAlignment="Center" Margin="5"/>
-				<TextBlock Text="Z:" VerticalAlignment="Center" Margin="5"/>
+				<Label Content="Z:" VerticalAlignment="Center" Margin="5"/>
 				<TextBox Width="50"  VerticalAlignment="Center" Margin="5"/>
 			</StackPanel>
 			<StackPanel Orientation="Horizontal">
-				<TextBlock Text="X:" VerticalAlignment="Center" Margin="5"/>
+				<Label Content="X:" VerticalAlignment="Center" Margin="5"/>
 				<TextBox Width="50"  VerticalAlignment="Center" Margin="5"/>
-				<TextBlock Text="Y:" VerticalAlignment="Center" Margin="5"/>
+				<Label Content="Y:" VerticalAlignment="Center" Margin="5"/>
 				<TextBox Width="50"  VerticalAlignment="Center" Margin="5"/>
-				<TextBlock Text="Z:" VerticalAlignment="Center" Margin="5"/>
+				<Label Content="Z:" VerticalAlignment="Center" Margin="5"/>
 				<TextBox Width="50"  VerticalAlignment="Center" Margin="5"/>
 			</StackPanel>
+		</StackPanel>
+		<StackPanel Grid.Column="2" Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Content="Save" Margin="5" Padding="10 0 10 0"/>
 		</StackPanel>
 	</Grid>
 </Window>
