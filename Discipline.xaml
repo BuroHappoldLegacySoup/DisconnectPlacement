@@ -1,0 +1,82 @@
+﻿<Window x:Class="DisconnectPlacement.Discipline"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DisconnectPlacement"
+        mc:Ignorable="d"
+        Title="Discipline" Height="950" Width="800">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="10px"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="10px"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="10px"/>
+			<RowDefinition Height="20px"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="40px"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="40px"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="40px"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="40px"/>
+			<RowDefinition Height="10px"/>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="2" Grid.Column="1">
+			<StackPanel Orientation="Horizontal" Margin="10 10 0 0 ">
+				<TextBlock Text="Discipline"/>
+				<ComboBox Margin="10 0 0 0" Width="140px"/>
+			</StackPanel>
+			<CheckBox VerticalAlignment="Center" Margin="10 10 0 0">Is Linked Model?</CheckBox>
+			<!--This visibility will depend on the checkbox-->
+			<StackPanel Visibility="Visible" Orientation="Horizontal" Margin="0 5 0 5">
+				<TextBlock VerticalAlignment="Center" Margin="10 10 0 0">File:</TextBlock>
+				<ComboBox Margin="10 0 0 0" Width="150"></ComboBox>
+			</StackPanel>
+			<StackPanel Visibility="Visible" Orientation="Horizontal" Margin="0 5 0 5">
+				<TextBlock VerticalAlignment="Center" Margin="10 10 0 0">Workset:</TextBlock>
+				<ComboBox Margin="10 0 0 0" Width="150"></ComboBox>
+			</StackPanel>
+		</StackPanel>
+		<DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+			<DataGrid.Columns>
+				<DataGridCheckBoxColumn Header="Select"></DataGridCheckBoxColumn>
+				<DataGridTextColumn Header="Category" Width="100"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<DataGrid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Family" Width="100"/>
+				<DataGridTextColumn Header="Type" Width="100"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal"
+			Margin="10 10 10 10" HorizontalAlignment="Left">
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" Click="PlaceDisconnect_Click">Add</Button>
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" >Delete</Button>
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" >Modify</Button>
+		</StackPanel>
+		<DataGrid Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Sheet" Width="100"/>
+				<DataGridTextColumn Header="Type" Width="100"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<StackPanel Grid.Row="8" Grid.Column="1" Orientation="Horizontal"
+			Margin="10 10 10 10" HorizontalAlignment="Left">
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" Click="PlaceDisconnect_Click">Add</Button>
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" >Delete</Button>
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" >Modify</Button>
+		</StackPanel>
+		<StackPanel Grid.Row="10" Grid.Column="2" Orientation="Horizontal"
+			Margin="10 10 10 10" HorizontalAlignment="Right">
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" >Cancel</Button>
+			<Button Width="100px" Margin="2.5px 0px 2.5px 0px" >Save</Button>
+		</StackPanel>
+	</Grid>
+</Window>
